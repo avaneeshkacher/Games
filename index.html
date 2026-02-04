@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blockland Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Blockland Builder</h1>
+        <p>Explore, mine, and place blocks in a tiny Minecraft-like sandbox.</p>
+      </header>
+
+      <main>
+        <section class="hud">
+          <div class="stats">
+            <div><span>Position</span><strong id="position">0, 0</strong></div>
+            <div><span>Mode</span><strong id="mode">Place</strong></div>
+            <div><span>Block</span><strong id="selected">Grass</strong></div>
+          </div>
+          <div class="controls">
+            <button id="toggle-mode">Switch to Mine</button>
+            <button id="reset-world">Reset World</button>
+            <button id="save-world">Save</button>
+            <button id="load-world">Load</button>
+          </div>
+        </section>
+
+        <section class="workspace">
+          <div class="palette" id="palette"></div>
+          <div class="viewport">
+            <canvas id="world" width="640" height="480"></canvas>
+            <div class="tips">
+              <p><strong>Click</strong> to place or mine blocks.</p>
+              <p><strong>Drag</strong> to paint quickly. <strong>Scroll</strong> to zoom.</p>
+              <p><strong>Arrow keys</strong> to pan the camera.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
